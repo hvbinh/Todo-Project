@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="8" passed="8">
+  <reporter-output>
+  </reporter-output>
+  <suite name="TestCases.ToDoTestCase" duration-ms="24424" started-at="2020-03-26T23:41:38 ICT" finished-at="2020-03-26T23:42:02 ICT">
+    <groups>
+    </groups>
+    <test name="Command line test" duration-ms="24424" started-at="2020-03-26T23:41:38 ICT" finished-at="2020-03-26T23:42:02 ICT">
+      <class name="TestCases.ToDoTestCase">
+        <test-method status="PASS" signature="setUpBrowser()[pri:0, instance:TestCases.ToDoTestCase@1a968a59]" name="setUpBrowser" is-config="true" duration-ms="15603" started-at="2020-03-26T23:41:38 ICT" finished-at="2020-03-26T23:41:53 ICT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpBrowser -->
+        <test-method status="PASS" signature="addTask(java.lang.String)[pri:0, instance:TestCases.ToDoTestCase@1a968a59]" name="addTask" duration-ms="3697" started-at="2020-03-26T23:41:53 ICT" description="Verify that add task works correctly" data-provider="setTask" finished-at="2020-03-26T23:41:57 ICT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[task 1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addTask -->
+        <test-method status="PASS" signature="addTask(java.lang.String)[pri:0, instance:TestCases.ToDoTestCase@1a968a59]" name="addTask" duration-ms="1274" started-at="2020-03-26T23:41:57 ICT" description="Verify that add task works correctly" data-provider="setTask" finished-at="2020-03-26T23:41:58 ICT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[task 2]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addTask -->
+        <test-method status="PASS" signature="addTask(java.lang.String)[pri:0, instance:TestCases.ToDoTestCase@1a968a59]" name="addTask" duration-ms="886" started-at="2020-03-26T23:41:58 ICT" description="Verify that add task works correctly" data-provider="setTask" finished-at="2020-03-26T23:41:59 ICT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[task 3]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addTask -->
+        <test-method status="PASS" signature="addTask(java.lang.String)[pri:0, instance:TestCases.ToDoTestCase@1a968a59]" name="addTask" duration-ms="879" started-at="2020-03-26T23:41:59 ICT" description="Verify that add task works correctly" data-provider="setTask" finished-at="2020-03-26T23:42:00 ICT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[task 4]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addTask -->
+        <test-method status="PASS" signature="addTask(java.lang.String)[pri:0, instance:TestCases.ToDoTestCase@1a968a59]" name="addTask" duration-ms="964" started-at="2020-03-26T23:42:00 ICT" description="Verify that add task works correctly" data-provider="setTask" finished-at="2020-03-26T23:42:01 ICT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[task 5]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addTask -->
+        <test-method status="PASS" signature="removeTask(java.lang.String)[pri:0, instance:TestCases.ToDoTestCase@1a968a59]" name="removeTask" duration-ms="199" started-at="2020-03-26T23:42:01 ICT" description="Verify that remove task on all list works correctly" data-provider="removeTask" finished-at="2020-03-26T23:42:01 ICT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[task 1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- removeTask -->
+        <test-method status="PASS" signature="removeTask(java.lang.String)[pri:0, instance:TestCases.ToDoTestCase@1a968a59]" name="removeTask" duration-ms="401" started-at="2020-03-26T23:42:01 ICT" description="Verify that remove task on all list works correctly" data-provider="removeTask" finished-at="2020-03-26T23:42:02 ICT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[task 2]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- removeTask -->
+        <test-method status="PASS" signature="removeTask(java.lang.String)[pri:0, instance:TestCases.ToDoTestCase@1a968a59]" name="removeTask" duration-ms="318" started-at="2020-03-26T23:42:02 ICT" description="Verify that remove task on all list works correctly" data-provider="removeTask" finished-at="2020-03-26T23:42:02 ICT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[task 3]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- removeTask -->
+      </class> <!-- TestCases.ToDoTestCase -->
+    </test> <!-- Command line test -->
+  </suite> <!-- TestCases.ToDoTestCase -->
+</testng-results>
