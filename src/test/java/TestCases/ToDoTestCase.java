@@ -2,6 +2,7 @@ package TestCases;
 
 import CrossBrowsers.Browsers;
 import PageObjects.TodoObject;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
@@ -31,12 +32,15 @@ public class ToDoTestCase {
     {
         todo.completedTask(task);
     }
-    @Test
-    public void updateTask()
+    @Test(description = "Verify that update task on all list works correctly",dataProvider = "updateTask")
+    public void updateTask(String oldTask, String newTask)
     {
-        todo.updateTask("task 4","my update");
-    }
+        String e = todo.updateTask(oldTask,newTask);
+        String text = oldTask+newTask;
+        System.out.print("e="+e);
+        Assert.assertEquals(e, text);
 
+    }
 
 
     @DataProvider(name = "setTask")
@@ -58,6 +62,14 @@ public class ToDoTestCase {
                         {"task 1"},
                         {"task 2"},
                         {"task 3"},
+                };
+
+    }
+    @DataProvider(name = "updateTask")
+    public Object[][] updateTask(){
+        return new Object[][]
+                {
+                        {"task 4","my update"}
                 };
 
     }

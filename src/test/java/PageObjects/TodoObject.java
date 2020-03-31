@@ -12,8 +12,8 @@ import java.util.List;
 public class TodoObject {
 
     private By task_txt = By.xpath("//input[@class='new-todo']");
-    private By countlb = By.xpath("//*[@class='todo-count']/strong");
-    private By radio = By.xpath("//label[.='a']/preceding-sibling::input");
+    private By count_lb = By.xpath("//*[@class='todo-count']/strong");
+    private By radio_btn = By.xpath("//label[.='a']/preceding-sibling::input");
     private By todoList = By.xpath("//ul[@class='todo-list']");
 
 
@@ -36,7 +36,7 @@ public class TodoObject {
     }
     public int countNumberLeft()
     {
-        return Integer.parseInt(Browsers.driver.findElement(countlb).getText());
+        return Integer.parseInt(Browsers.driver.findElement(count_lb).getText());
     }
     public void completedTask(String task)
     {
@@ -47,22 +47,25 @@ public class TodoObject {
         WebElement elementTable = Browsers.driver.findElement(todoList);
         return elementTable.findElements(By.tagName("li"));
     }
-    public void updateTask(String task, String text)
+    public String updateTask(String task, String text)
     {
         List<WebElement> list =listTask();
         for(WebElement e:list)
         {
+
             if(e.getText().equalsIgnoreCase(task))
             {
+                String str = e.getText();
                 Actions builder = new Actions(Browsers.driver);
                 builder.doubleClick(e).sendKeys(text);
-                builder.doubleClick(Browsers.driver.findElement(task_txt)).sendKeys(Keys.ENTER);
+                builder.perform();
+                return str +=text;
+                
             }
         }
-    }
-    public void clearTask()
-    {
-        Browsers.driver.findElement(task_txt).clear();
+        return list.get(0).getText();
+
+
     }
 
 
