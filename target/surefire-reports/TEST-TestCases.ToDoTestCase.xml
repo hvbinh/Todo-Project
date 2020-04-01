@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="8" failures="0" name="TestCases.ToDoTestCase" time="8.618" errors="0" skipped="0">
+<testsuite tests="10" failures="1" name="TestCases.ToDoTestCase" time="9.612" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_241\jre\bin"/>
@@ -65,12 +65,59 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="TestCases.ToDoTestCase" name="addTask" time="3.707"/>
-  <testcase classname="TestCases.ToDoTestCase" name="addTask" time="1.262"/>
-  <testcase classname="TestCases.ToDoTestCase" name="addTask" time="0.886"/>
-  <testcase classname="TestCases.ToDoTestCase" name="addTask" time="0.88"/>
-  <testcase classname="TestCases.ToDoTestCase" name="addTask" time="0.964"/>
-  <testcase classname="TestCases.ToDoTestCase" name="removeTask" time="0.203"/>
-  <testcase classname="TestCases.ToDoTestCase" name="removeTask" time="0.399"/>
-  <testcase classname="TestCases.ToDoTestCase" name="removeTask" time="0.317"/>
+  <testcase classname="TestCases.ToDoTestCase" name="showCompletedList" time="0.203">
+    <failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;link text&quot;,&quot;selector&quot;:&quot;Completed&quot;}
+  (Session info: chrome=80.0.3987.162)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-39VG3MM&apos;, ip: &apos;192.168.1.245&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_241&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.162, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:62536}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: ffc270d15c4139198c0bba0290b1fc0c
+*** Element info: {Using=link text, value=Completed}" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;link text&quot;,&quot;selector&quot;:&quot;Completed&quot;}
+  (Session info: chrome=80.0.3987.162)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-39VG3MM&apos;, ip: &apos;192.168.1.245&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_241&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.162, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:62536}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: ffc270d15c4139198c0bba0290b1fc0c
+*** Element info: {Using=link text, value=Completed}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByLinkText(RemoteWebDriver.java:380)
+	at org.openqa.selenium.By$ByLinkText.findElement(By.java:220)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at PageObjects.TodoObject.showCompletedTask(TodoObject.java:78)
+	at TestCases.ToDoTestCase.showCompletedList(ToDoTestCase.java:53)
+</failure>
+    <system-out>Configuring TestNG with: org.apache.maven.surefire.testng.conf.TestNG652Configurator@555590
+</system-out>
+    <system-err>Starting ChromeDriver 80.0.3987.106 (f68069574609230cf9b635cd784cfb1bf81bb53a-refs/branch-heads/3987@{#882}) on port 46594
+Only local connections are allowed.
+Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
+[1585755435.700][WARNING]: Timed out connecting to Chrome, retrying...
+Apr 01, 2020 10:37:18 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+[1585755440.521][WARNING]: Timed out connecting to Chrome, retrying...
+</system-err>
+  </testcase>
+  <testcase classname="TestCases.ToDoTestCase" name="addTask" time="3.434"/>
+  <testcase classname="TestCases.ToDoTestCase" name="addTask" time="0.973"/>
+  <testcase classname="TestCases.ToDoTestCase" name="addTask" time="0.818"/>
+  <testcase classname="TestCases.ToDoTestCase" name="addTask" time="1.026"/>
+  <testcase classname="TestCases.ToDoTestCase" name="addTask" time="1.348"/>
+  <testcase classname="TestCases.ToDoTestCase" name="removeTask" time="0.375"/>
+  <testcase classname="TestCases.ToDoTestCase" name="removeTask" time="0.351"/>
+  <testcase classname="TestCases.ToDoTestCase" name="removeTask" time="0.469"/>
+  <testcase classname="TestCases.ToDoTestCase" name="showActiveList" time="0.615"/>
 </testsuite>

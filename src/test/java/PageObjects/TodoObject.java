@@ -14,6 +14,9 @@ public class TodoObject {
     private By task_txt = By.xpath("//input[@class='new-todo']");
     private By count_lb = By.xpath("//*[@class='todo-count']/strong");
     private By radio_btn = By.xpath("//label[.='a']/preceding-sibling::input");
+    private By active_link = By.linkText("Active");
+    private By completed_link = By.linkText("Completed");
+    private By all_link = By.linkText("All");
     private By todoList = By.xpath("//ul[@class='todo-list']");
 
 
@@ -60,12 +63,28 @@ public class TodoObject {
                 builder.doubleClick(e).sendKeys(text);
                 builder.perform();
                 return str +=text;
-                
             }
         }
         return list.get(0).getText();
+    }
+    public int showActiveTasks()
+    {
+        Browsers.driver.findElement(active_link).click();
+        List<WebElement> list = listTask();
+        return list.size();
 
-
+    }
+    public int showCompletedTask()
+    {
+        Browsers.driver.findElement(completed_link).click();
+        List<WebElement> list = listTask();
+        return list.size();
+    }
+    public int showAllTask()
+    {
+        Browsers.driver.findElement(all_link).click();
+        List<WebElement> list = listTask();
+        return list.size();
     }
 
 

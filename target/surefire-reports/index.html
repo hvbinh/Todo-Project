@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-TestCases_ToDoTestCase">
-              <span class="suite-name border-passed">TestCases.ToDoTestCase</span>
+              <span class="suite-name border-failed">TestCases.ToDoTestCase</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,7 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">8 methods,   8 passed</span>
+                    <span class="method-stats">10 methods, 1 failed,   9 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-TestCases_ToDoTestCase" class="hide-methods failed suite-TestCases_ToDoTestCase"> (hide)</a> <!-- hide-methods failed suite-TestCases_ToDoTestCase -->
+                      <a href="#" panel-name="suite-TestCases_ToDoTestCase" class="show-methods failed suite-TestCases_ToDoTestCase"> (show)</a> <!-- show-methods failed suite-TestCases_ToDoTestCase -->
+                    </span>
+                    <div class="method-list-content failed suite-TestCases_ToDoTestCase">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-TestCases_ToDoTestCase" title="TestCases.ToDoTestCase" hash-for-method="showCompletedList">showCompletedList</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-TestCases_ToDoTestCase -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,22 +116,12 @@
                     <div class="method-list-content passed suite-TestCases_ToDoTestCase">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-TestCases_ToDoTestCase" title="TestCases.ToDoTestCase" hash-for-method="addTask(task 1)">addTask(task 1)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-TestCases_ToDoTestCase" title="TestCases.ToDoTestCase" hash-for-method="addTask(task 5)">addTask(task 5)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-TestCases_ToDoTestCase" title="TestCases.ToDoTestCase" hash-for-method="addTask(task 4)">addTask(task 4)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-TestCases_ToDoTestCase" title="TestCases.ToDoTestCase" hash-for-method="addTask(task 3)">addTask(task 3)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-TestCases_ToDoTestCase" title="TestCases.ToDoTestCase" hash-for-method="addTask(task 1)">addTask(task 1)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -127,7 +131,17 @@
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-TestCases_ToDoTestCase" title="TestCases.ToDoTestCase" hash-for-method="removeTask(task 3)">removeTask(task 3)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-TestCases_ToDoTestCase" title="TestCases.ToDoTestCase" hash-for-method="addTask(task 3)">addTask(task 3)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-TestCases_ToDoTestCase" title="TestCases.ToDoTestCase" hash-for-method="addTask(task 4)">addTask(task 4)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-TestCases_ToDoTestCase" title="TestCases.ToDoTestCase" hash-for-method="removeTask(task 1)">removeTask(task 1)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -137,7 +151,12 @@
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-TestCases_ToDoTestCase" title="TestCases.ToDoTestCase" hash-for-method="removeTask(task 1)">removeTask(task 1)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-TestCases_ToDoTestCase" title="TestCases.ToDoTestCase" hash-for-method="removeTask(task 3)">removeTask(task 3)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-TestCases_ToDoTestCase" title="TestCases.ToDoTestCase" hash-for-method="showActiveList">showActiveList</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-TestCases_ToDoTestCase -->
@@ -152,22 +171,53 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-TestCases_ToDoTestCase" class="panel TestCases_ToDoTestCase">
+          <div class="suite-TestCases_ToDoTestCase-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">TestCases.ToDoTestCase</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="showCompletedList">
+                  </a> <!-- showCompletedList -->
+                  <span class="method-name">showCompletedList</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;link text&quot;,&quot;selector&quot;:&quot;Completed&quot;}
+  (Session info: chrome=80.0.3987.162)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-39VG3MM&apos;, ip: &apos;192.168.1.245&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_241&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.162, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:62536}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: ffc270d15c4139198c0bba0290b1fc0c
+*** Element info: {Using=link text, value=Completed}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByLinkText(RemoteWebDriver.java:380)
+	at org.openqa.selenium.By$ByLinkText.findElement(By.java:220)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at PageObjects.TodoObject.showCompletedTask(TodoObject.java:78)
+	at TestCases.ToDoTestCase.showCompletedList(ToDoTestCase.java:53)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+... Removed 40 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Verify that completed list shows correctly)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-TestCases_ToDoTestCase-class-failed -->
           <div class="suite-TestCases_ToDoTestCase-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
               <span class="class-name">TestCases.ToDoTestCase</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="addTask(task 1)">
-                  </a> <!-- addTask(task 1) -->
-                  <span class="method-name">addTask</span>
-                  <span class="parameters">(task 1)</span>
-                  <em>
-(Verify that add task works correctly)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
                   <a name="addTask(task 5)">
@@ -180,20 +230,10 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="addTask(task 4)">
-                  </a> <!-- addTask(task 4) -->
+                  <a name="addTask(task 1)">
+                  </a> <!-- addTask(task 1) -->
                   <span class="method-name">addTask</span>
-                  <span class="parameters">(task 4)</span>
-                  <em>
-(Verify that add task works correctly)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="addTask(task 3)">
-                  </a> <!-- addTask(task 3) -->
-                  <span class="method-name">addTask</span>
-                  <span class="parameters">(task 3)</span>
+                  <span class="parameters">(task 1)</span>
                   <em>
 (Verify that add task works correctly)                  </em>
                 </div> <!-- method-content -->
@@ -210,10 +250,30 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="removeTask(task 3)">
-                  </a> <!-- removeTask(task 3) -->
-                  <span class="method-name">removeTask</span>
+                  <a name="addTask(task 3)">
+                  </a> <!-- addTask(task 3) -->
+                  <span class="method-name">addTask</span>
                   <span class="parameters">(task 3)</span>
+                  <em>
+(Verify that add task works correctly)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="addTask(task 4)">
+                  </a> <!-- addTask(task 4) -->
+                  <span class="method-name">addTask</span>
+                  <span class="parameters">(task 4)</span>
+                  <em>
+(Verify that add task works correctly)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="removeTask(task 1)">
+                  </a> <!-- removeTask(task 1) -->
+                  <span class="method-name">removeTask</span>
+                  <span class="parameters">(task 1)</span>
                   <em>
 (Verify that remove task on all list works correctly)                  </em>
                 </div> <!-- method-content -->
@@ -230,12 +290,21 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="removeTask(task 1)">
-                  </a> <!-- removeTask(task 1) -->
+                  <a name="removeTask(task 3)">
+                  </a> <!-- removeTask(task 3) -->
                   <span class="method-name">removeTask</span>
-                  <span class="parameters">(task 1)</span>
+                  <span class="parameters">(task 3)</span>
                   <em>
 (Verify that remove task on all list works correctly)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="showActiveList">
+                  </a> <!-- showActiveList -->
+                  <span class="method-name">showActiveList</span>
+                  <em>
+(Verify that active list shows correctly)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -291,44 +360,52 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(8);
+data.addRows(10);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'addTask')
 data.setCell(0, 2, 'TestCases.ToDoTestCase')
-data.setCell(0, 3, 3697);
+data.setCell(0, 3, 3432);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'addTask')
 data.setCell(1, 2, 'TestCases.ToDoTestCase')
-data.setCell(1, 3, 1274);
+data.setCell(1, 3, 1347);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'addTask')
 data.setCell(2, 2, 'TestCases.ToDoTestCase')
-data.setCell(2, 3, 964);
+data.setCell(2, 3, 1025);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'addTask')
 data.setCell(3, 2, 'TestCases.ToDoTestCase')
-data.setCell(3, 3, 886);
+data.setCell(3, 3, 972);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'addTask')
 data.setCell(4, 2, 'TestCases.ToDoTestCase')
-data.setCell(4, 3, 879);
+data.setCell(4, 3, 819);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'removeTask')
+data.setCell(5, 1, 'showActiveList')
 data.setCell(5, 2, 'TestCases.ToDoTestCase')
-data.setCell(5, 3, 401);
+data.setCell(5, 3, 614);
 data.setCell(6, 0, 6)
 data.setCell(6, 1, 'removeTask')
 data.setCell(6, 2, 'TestCases.ToDoTestCase')
-data.setCell(6, 3, 318);
+data.setCell(6, 3, 468);
 data.setCell(7, 0, 7)
 data.setCell(7, 1, 'removeTask')
 data.setCell(7, 2, 'TestCases.ToDoTestCase')
-data.setCell(7, 3, 199);
+data.setCell(7, 3, 373);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'removeTask')
+data.setCell(8, 2, 'TestCases.ToDoTestCase')
+data.setCell(8, 3, 350);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'showCompletedList')
+data.setCell(9, 2, 'TestCases.ToDoTestCase')
+data.setCell(9, 3, 143);
 window.suiteTableData['TestCases_ToDoTestCase']= { tableData: data, tableDiv: 'times-div-TestCases_ToDoTestCase'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 8 seconds</span>
+              <span class="suite-total-time">Total running time: 9 seconds</span>
               <div id="times-div-TestCases_ToDoTestCase">
               </div> <!-- times-div-TestCases_ToDoTestCase -->
             </div> <!-- times-div -->
@@ -343,9 +420,16 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-TestCases_ToDoTestCase" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">1 ignored method</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">TestCases.ToDoTestCase</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">updateTask</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-TestCases_ToDoTestCase" class="panel">
@@ -360,36 +444,46 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">showCompletedList</span>
+                <span class="method-start">15552 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
                 <span class="method-name">addTask(task 1)</span>
-                <span class="method-start">15713 ms</span>
+                <span class="method-start">15806 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">addTask(task 2)</span>
-                <span class="method-start">19421 ms</span>
+                <span class="method-start">19241 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">addTask(task 3)</span>
-                <span class="method-start">20696 ms</span>
+                <span class="method-start">20214 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">addTask(task 4)</span>
-                <span class="method-start">21583 ms</span>
+                <span class="method-start">21035 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">addTask(task 5)</span>
-                <span class="method-start">22463 ms</span>
+                <span class="method-start">22061 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">removeTask(task 1)</span>
-                <span class="method-start">23431 ms</span>
+                <span class="method-start">23411 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">removeTask(task 2)</span>
-                <span class="method-start">23631 ms</span>
+                <span class="method-start">23786 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">removeTask(task 3)</span>
-                <span class="method-start">24033 ms</span>
+                <span class="method-start">24138 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">showActiveList</span>
+                <span class="method-start">24610 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

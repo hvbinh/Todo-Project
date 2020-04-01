@@ -5,8 +5,8 @@
     <classes>
       <class name="TestCases.ToDoTestCase">
         <methods>
+          <include name="showCompletedList"/>
           <include name="setUpBrowser"/>
-          <include name="removeTask"/>
         </methods>
       </class> <!-- TestCases.ToDoTestCase -->
     </classes>
