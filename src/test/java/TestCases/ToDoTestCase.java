@@ -59,6 +59,15 @@ public class ToDoTestCase {
         int i = todo.showAllTask();
         Assert.assertEquals(i, 5);
     }
+    @Test(priority = 6,description = "Verify that 'count item left' wil increase after adding new task")
+    public void checkAddCount()
+    {
+        todo.addTask("task 6");
+        int i = todo.countNumberLeft();
+        int j= todo.showActiveTasks();
+        Assert.assertEquals(i, j);
+    }
+
     @DataProvider(name = "setTask")
     public Object[][] setTask(){
         return new Object[][]
