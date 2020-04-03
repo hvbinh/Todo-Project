@@ -67,7 +67,20 @@ public class ToDoTestCase {
         int j= todo.showActiveTasks();
         Assert.assertEquals(i, j);
     }
-
+    @Test(priority = 7,description = "Verify that 'count item left' wil increase after uncheck completed task")
+    public void checkCountAfterUncheckCompletedTask()
+    {
+        int countBefore = todo.countNumberLeft();
+        int CountAfter=todo.uncheckCompletedTask("task 3");
+        Assert.assertEquals(CountAfter, countBefore+1);
+    }
+    @Test(priority = 8,description = "Verify that 'count item left' wil decreased after Unselect active task")
+    public void checkCountAfterUncheckActiveTask()
+    {
+        int countBefore = todo.countNumberLeft();
+        int CountAfter=todo.uncheckActiveTask("task 3");
+        Assert.assertEquals(CountAfter, countBefore-1);
+    }
     @DataProvider(name = "setTask")
     public Object[][] setTask(){
         return new Object[][]

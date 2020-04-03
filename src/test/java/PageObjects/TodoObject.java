@@ -86,6 +86,18 @@ public class TodoObject {
         List<WebElement> list = listTask();
         return list.size();
     }
+    public int uncheckCompletedTask(String task)
+    {
+        Browsers.driver.findElement(all_link).click();
+        completedTask(task);
+        return countNumberLeft();
+    }
+    public int uncheckActiveTask(String task)
+    {
+        Browsers.driver.findElement(all_link).click();
+        completedTask(task);
+        return countNumberLeft();
+    }
 
 
 }
