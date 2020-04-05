@@ -81,6 +81,30 @@ public class ToDoTestCase {
         int CountAfter=todo.uncheckActiveTask("task 3");
         Assert.assertEquals(CountAfter, countBefore-1);
     }
+    @Test(priority = 9,description = "Verify that 'count item left' wil decreased after remove an active task")
+    public void removeActiveTask()
+    {
+        int i = todo.showActiveTasks();
+        todo.removeActiveTask("task 5");
+        boolean check = todo.checkTaskInList("task 5");
+        Assert.assertFalse(check);
+        int j = todo.showActiveTasks();
+        Assert.assertEquals(j,i-1);
+    }
+    @Test(priority = 10,description = "Verify that remove task on all list works correctly")
+    public void removeTaskOnAllList()
+    {
+        todo.removeTaskOnAllList("task 1");
+        boolean check = todo.checkTaskInList("task 1");
+        Assert.assertFalse(check);
+    }
+    @Test(priority = 11,description = "Verify that remove task on completed list correctly")
+    public void removeTaskOnCompletedTask()
+    {
+        todo.removeCompletedTask("task 2");
+        boolean check = todo.checkTaskInList("task 2");
+        Assert.assertFalse(check);
+    }
     @DataProvider(name = "setTask")
     public Object[][] setTask(){
         return new Object[][]

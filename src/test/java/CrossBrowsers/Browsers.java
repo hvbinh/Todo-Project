@@ -27,7 +27,7 @@ public class Browsers {
     public static WebDriver driver;
     public static WebDriverWait wait;
     private static long TIMEOUT =60;
-    public WebDriver getDriver()
+    public static WebDriver getDriver()
     {
         return driver;
     }
@@ -126,6 +126,10 @@ public class Browsers {
     public static void fill(How by,String locator, String withText)
     {
         getElement(by, locator).sendKeys(withText);
+    }
+    public static WebElement find(How how,String locator)
+    {
+        return driver.findElement(how.buildBy(locator));
     }
     public static void check(How by,String locator)
     {

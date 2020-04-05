@@ -5,7 +5,7 @@
     <classes>
       <class name="TestCases.ToDoTestCase">
         <methods>
-          <include name="checkCountAfterUncheckCompletedTask"/>
+          <include name="removeActiveTask"/>
           <include name="setUpBrowser"/>
         </methods>
       </class> <!-- TestCases.ToDoTestCase -->

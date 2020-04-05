@@ -18,6 +18,7 @@ public class TodoObject {
     private By completed_link = By.linkText("Completed");
     private By all_link = By.linkText("All");
     private By todoList = By.xpath("//ul[@class='todo-list']");
+    private By remove_btn = By.xpath("//button[@class='destroy']");
 
 
     private WebElement radio(String task)
@@ -49,6 +50,18 @@ public class TodoObject {
     {
         WebElement elementTable = Browsers.driver.findElement(todoList);
         return elementTable.findElements(By.tagName("li"));
+    }
+    public boolean checkTaskInList(String task)
+    {
+        List<WebElement> list = listTask();
+        for(WebElement e : list)
+        {
+            if(e.getText().equalsIgnoreCase(task))
+            {
+                return true;
+            }
+        }
+        return false;
     }
     public String updateTask(String task, String text)
     {
@@ -98,6 +111,57 @@ public class TodoObject {
         completedTask(task);
         return countNumberLeft();
     }
+    public void removeActiveTask(String task)
+    {
+        List<WebElement> list = listTask();
+        Actions hover = new Actions(Browsers.getDriver());
+        for(WebElement e: list)
+        {
+            if(e.getText().equalsIgnoreCase(task))
+            {
+                hover.moveToElement(e).
+                        click(removeTask(e.getText()))
+                        .perform();
+                break;
+            }
+        }
 
+    }
+    public WebElement removeTask(String task)
+    {
+        return Browsers.find(How.XPATH, String.format("//div/label[.='%s']/following-sibling::button",task));
+    }
+    public void removeTaskOnAllList(String task)
+    {
+        Browsers.getDriver().findElement(all_link).click();
+        List<WebElement> list = listTask();
+        Actions hover = new Actions(Browsers.getDriver());
+        for(WebElement e: list)
+        {
+            if(e.getText().equalsIgnoreCase(task))
+            {
+                hover.moveToElement(e).
+                        click(removeTask(e.getText()))
+                        .perform();
+                break;
+            }
+        }
+    }
+    public void removeCompletedTask(String task)
+    {
+        Browsers.getDriver().findElement(completed_link).click();
+        List<WebElement> list = listTask();
+        Actions hover = new Actions(Browsers.getDriver());
+        for(WebElement e: list)
+        {
+            if(e.getText().equalsIgnoreCase(task))
+            {
+                hover.moveToElement(e).
+                        click(removeTask(e.getText()))
+                        .perform();
+                break;
+            }
+        }
+    }
 
 }
