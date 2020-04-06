@@ -19,6 +19,7 @@ public class TodoObject {
     private By all_link = By.linkText("All");
     private By todoList = By.xpath("//ul[@class='todo-list']");
     private By remove_btn = By.xpath("//button[@class='destroy']");
+    private By removeAllComplete_link = By.className("clear-completed");
 
 
     private WebElement radio(String task)
@@ -162,6 +163,27 @@ public class TodoObject {
                 break;
             }
         }
+    }
+    public int clearAllCompletedTask()
+    {
+        Browsers.getDriver().findElement(removeAllComplete_link).click();
+        Browsers.getDriver().findElement(completed_link).click();
+        return listTask().size();
+    }
+    public void refreshPageOnAllList()
+    {
+        Browsers.getDriver().findElement(all_link).click();
+        Browsers.getDriver().navigate().refresh();
+    }
+    public void refreshPageOnActiveList()
+    {
+        Browsers.getDriver().findElement(active_link).click();
+        Browsers.getDriver().navigate().refresh();
+    }
+    public void refreshPageOnCompletedList()
+    {
+        Browsers.getDriver().findElement(completed_link).click();
+        Browsers.getDriver().navigate().refresh();
     }
 
 }

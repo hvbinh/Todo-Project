@@ -105,6 +105,20 @@ public class ToDoTestCase {
         boolean check = todo.checkTaskInList("task 2");
         Assert.assertFalse(check);
     }
+    @Test(priority = 12,description = "Verify that clear completed task works correctly")
+    public void removeAllCompletedTask()
+    {
+        int i = todo.clearAllCompletedTask();
+        Assert.assertEquals(i, 0);
+
+    }
+    @Test(priority = 13,description = "Verify that all list will show after refreshing page")
+    public void showAllTaskOnAllList()
+    {
+        todo.refreshPageOnAllList();
+        int i = todo.listTask().size();
+        Assert.assertEquals(i, 2);
+    }
     @DataProvider(name = "setTask")
     public Object[][] setTask(){
         return new Object[][]
