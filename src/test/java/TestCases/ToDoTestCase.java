@@ -24,7 +24,7 @@ public class ToDoTestCase {
     {
         todo.loadPage();
         todo.addTask(task);
-        int count = todo.listTask().size();
+        int count = todo.listTask("all").size();
         Assert.assertEquals(todo.countNumberLeft(), count);
     }
     @Test(priority = 2,description = "Verify that remove task on all list works correctly",dataProvider = "removeTask")
@@ -115,9 +115,26 @@ public class ToDoTestCase {
     @Test(priority = 13,description = "Verify that all list will show after refreshing page")
     public void showAllTaskOnAllList()
     {
+        int i = todo.listTask("all").size();
         todo.refreshPageOnAllList();
-        int i = todo.listTask().size();
-        Assert.assertEquals(i, 2);
+        int j = todo.listTask("all").size();
+        Assert.assertEquals(i, j);
+    }
+    @Test(priority = 14,description = "Verify that active list will show after refreshing page")
+    public void showAllTaskOnActiveList()
+    {
+        int i = todo.listTask("active").size();
+        todo.refreshPageOnActiveList();
+        int j = todo.listTask("active").size();
+        Assert.assertEquals(i, j);
+    }
+    @Test(priority = 15,description = "Verify that completed list will show after refreshing page")
+    public void showAllTaskOnCompletedList()
+    {
+        int i = todo.listTask("completed").size();
+        todo.refreshPageOnCompletedList();
+        int j = todo.listTask("completed").size();
+        Assert.assertEquals(i, j);
     }
     @DataProvider(name = "setTask")
     public Object[][] setTask(){

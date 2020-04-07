@@ -47,14 +47,26 @@ public class TodoObject {
     {
         radio(task).click();
     }
-    public List<WebElement> listTask()
+    public List<WebElement> listTask(String link)
     {
+        if(link.equalsIgnoreCase("all"))
+        {
+            Browsers.getDriver().findElement(all_link).click();
+        }
+        else if(link.equalsIgnoreCase("active"))
+        {
+            Browsers.getDriver().findElement(active_link).click();
+        }
+        else if(link.equalsIgnoreCase("completed"))
+        {
+            Browsers.getDriver().findElement(completed_link).click();
+        }
         WebElement elementTable = Browsers.driver.findElement(todoList);
         return elementTable.findElements(By.tagName("li"));
     }
     public boolean checkTaskInList(String task)
     {
-        List<WebElement> list = listTask();
+        List<WebElement> list = listTask("all");
         for(WebElement e : list)
         {
             if(e.getText().equalsIgnoreCase(task))
@@ -66,7 +78,7 @@ public class TodoObject {
     }
     public String updateTask(String task, String text)
     {
-        List<WebElement> list =listTask();
+        List<WebElement> list =listTask("all");
         for(WebElement e:list)
         {
 
@@ -83,21 +95,21 @@ public class TodoObject {
     }
     public int showActiveTasks()
     {
-        Browsers.driver.findElement(active_link).click();
-        List<WebElement> list = listTask();
+
+        List<WebElement> list = listTask("active");
         return list.size();
 
     }
     public int showCompletedTask()
     {
-        Browsers.driver.findElement(completed_link).click();
-        List<WebElement> list = listTask();
+
+        List<WebElement> list = listTask("completed");
         return list.size();
     }
     public int showAllTask()
     {
-        Browsers.driver.findElement(all_link).click();
-        List<WebElement> list = listTask();
+
+        List<WebElement> list = listTask("all");
         return list.size();
     }
     public int uncheckCompletedTask(String task)
@@ -114,7 +126,7 @@ public class TodoObject {
     }
     public void removeActiveTask(String task)
     {
-        List<WebElement> list = listTask();
+        List<WebElement> list = listTask("active");
         Actions hover = new Actions(Browsers.getDriver());
         for(WebElement e: list)
         {
@@ -135,7 +147,7 @@ public class TodoObject {
     public void removeTaskOnAllList(String task)
     {
         Browsers.getDriver().findElement(all_link).click();
-        List<WebElement> list = listTask();
+        List<WebElement> list = listTask("all");
         Actions hover = new Actions(Browsers.getDriver());
         for(WebElement e: list)
         {
@@ -150,8 +162,8 @@ public class TodoObject {
     }
     public void removeCompletedTask(String task)
     {
-        Browsers.getDriver().findElement(completed_link).click();
-        List<WebElement> list = listTask();
+
+        List<WebElement> list = listTask("completed");
         Actions hover = new Actions(Browsers.getDriver());
         for(WebElement e: list)
         {
@@ -168,7 +180,7 @@ public class TodoObject {
     {
         Browsers.getDriver().findElement(removeAllComplete_link).click();
         Browsers.getDriver().findElement(completed_link).click();
-        return listTask().size();
+        return listTask("completed").size();
     }
     public void refreshPageOnAllList()
     {
