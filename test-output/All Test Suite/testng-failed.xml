@@ -5,22 +5,8 @@
     <classes>
       <class name="TestCases.ToDoTestCase">
         <methods>
-          <include name="showAllTaskOnCompletedList"/>
-          <include name="showAllList"/>
-          <include name="addTask" invocation-numbers="0 1 2 3 4"/>
-          <include name="removeAllCompletedTask"/>
-          <include name="removeActiveTask"/>
-          <include name="showAllTaskOnAllList"/>
-          <include name="showCompletedList"/>
           <include name="setUpBrowser"/>
-          <include name="checkAddCount"/>
-          <include name="removeTaskOnCompletedTask"/>
-          <include name="removeTaskOnAllList"/>
-          <include name="checkCountAfterUncheckActiveTask"/>
-          <include name="checkCountAfterUncheckCompletedTask"/>
-          <include name="showActiveList"/>
-          <include name="removeTask" invocation-numbers="0 1 2"/>
-          <include name="showAllTaskOnActiveList"/>
+          <include name="updateTask" invocation-numbers="0"/>
         </methods>
       </class> <!-- TestCases.ToDoTestCase -->
     </classes>

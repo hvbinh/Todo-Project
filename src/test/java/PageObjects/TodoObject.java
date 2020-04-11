@@ -76,22 +76,28 @@ public class TodoObject {
         }
         return false;
     }
-    public String updateTask(String task, String text)
+    public void updateTask(String oldTask, String newTask)
     {
         List<WebElement> list =listTask("all");
         for(WebElement e:list)
         {
 
-            if(e.getText().equalsIgnoreCase(task))
+            if(e.getText().equalsIgnoreCase(oldTask))
             {
                 String str = e.getText();
-                Actions builder = new Actions(Browsers.driver);
-                builder.doubleClick(e).sendKeys(text);
+                Actions builder = new Actions(Browsers.getDriver());
+                builder.doubleClick(e);
                 builder.perform();
-                return str +=text;
+                //WebElement e1 = e.findElement(By.xpath("//input[@class='edit']"));
+                while (e.getText()!="")
+                {
+                    e.findElement(By.xpath("//input[@class='edit']")).sendKeys(Keys.BACK_SPACE);
+                }
+                e.findElement(By.xpath("//input[@class='edit']")).sendKeys(newTask);
+
             }
         }
-        return list.get(0).getText();
+
     }
     public int showActiveTasks()
     {
