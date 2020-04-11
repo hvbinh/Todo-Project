@@ -97,7 +97,7 @@ public class ToDoTestCase {
         boolean check = todo.checkTaskInList("task 2");
         Assert.assertFalse(check);
     }
-    @Test(priority = 12,description = "Verify that clear completed task works correctly")
+    @Test(priority = 12,description = "Verify that clear completed task works correctly",enabled = false)
     public void removeAllCompletedTask()
     {
         int i = todo.clearAllCompletedTask();
@@ -131,10 +131,15 @@ public class ToDoTestCase {
     @Test(priority = 16,description = "Verify that update task on all list works correctly", dataProvider = "updateTask")
     public void updateTask(String oldTask, String newTask)
     {
-        todo.updateTask(oldTask,newTask);
-        //String text = oldTask+newTask;
+        String newText = todo.updateTask(oldTask,newTask);
+        Assert.assertEquals(newText, newTask);
 
-        //Assert.assertEquals(e, text);
+    }
+    @Test(priority = 17,description = "Verify that update task on all list works correctly", dataProvider = "updateTask1")
+    public void updateTask1(String oldTask, String newTask)
+    {
+        String newText = todo.updateTask(oldTask,newTask);
+        Assert.assertEquals(newText, newTask);
 
     }
     @DataProvider(name = "setTask")
@@ -145,7 +150,7 @@ public class ToDoTestCase {
                         {"task 2"},
                         {"task 3"},
                         {"task 4"},
-                        {"task 5"},
+                        {"task 5"}
                 };
 
     }
@@ -155,7 +160,7 @@ public class ToDoTestCase {
                 {
                         {"task 1"},
                         {"task 2"},
-                        {"task 3"},
+                        {"task 3"}
                 };
 
     }
@@ -164,6 +169,14 @@ public class ToDoTestCase {
         return new Object[][]
                 {
                         {"task 4","my update"}
+                };
+
+    }
+    @DataProvider(name = "updateTask1")
+    public Object[][] updateTask1(){
+        return new Object[][]
+                {
+                        {"task 3","my update1"}
                 };
 
     }
