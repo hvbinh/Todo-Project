@@ -129,19 +129,25 @@ public class ToDoTestCase {
         Assert.assertEquals(i, j);
     }
     @Test(priority = 16,description = "Verify that update task on all list works correctly", dataProvider = "updateTask")
-    public void updateTask(String oldTask, String newTask)
+    public void updateTaskOnAllList(String oldTask, String newTask)
     {
-        String newText = todo.updateTask(oldTask,newTask);
+        String newText = todo.updateTaskinAll(oldTask,newTask);
         Assert.assertEquals(newText, newTask);
 
     }
-    @Test(priority = 17,description = "Verify that update task on all list works correctly", dataProvider = "updateTask1")
-    public void updateTask1(String oldTask, String newTask)
+    @Test(priority = 17,description = "Verify that update completed task on Active list correctly", dataProvider = "updateTaskForActive")
+    public void updateTaskOnActiveList(String oldTask, String newTask)
     {
-        String newText = todo.updateTask(oldTask,newTask);
+        String newText = todo.updateTaskInActive(oldTask,newTask);
         Assert.assertEquals(newText, newTask);
-
     }
+    @Test(priority = 18,description = "Verify that update completed task on completed list correctly", dataProvider = "updateTaskForCompleted")
+    public void updateTaskOnCompletedList(String oldTask, String newTask)
+    {
+        String newText = todo.updateTaskInComplete(oldTask,newTask);
+        Assert.assertEquals(newText, newTask);
+    }
+
     @DataProvider(name = "setTask")
     public Object[][] setTask(){
         return new Object[][]
@@ -168,17 +174,27 @@ public class ToDoTestCase {
     public Object[][] updateTask(){
         return new Object[][]
                 {
-                        {"task 4","my update"}
-                };
-
-    }
-    @DataProvider(name = "updateTask1")
-    public Object[][] updateTask1(){
-        return new Object[][]
-                {
+                        {"task 4","my update"},
                         {"task 3","my update1"}
                 };
 
     }
+    @DataProvider(name = "updateTaskForActive")
+    public Object[][] updateTaskForActive(){
+        return new Object[][]
+                {
+                        {"my update","my update two"}
+                };
+
+    }
+    @DataProvider(name = "updateTaskForCompleted")
+    public Object[][] updateTaskForCompleted(){
+        return new Object[][]
+                {
+                        {"my update1","my update2"}
+                };
+
+    }
+
 
 }

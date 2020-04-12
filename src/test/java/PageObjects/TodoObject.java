@@ -76,7 +76,7 @@ public class TodoObject {
         }
         return false;
     }
-    public String updateTask(String oldTask, String newTask)
+    public String updateTaskinAll(String oldTask, String newTask)
     {
         List<WebElement> list =listTask("all");
         for(WebElement e:list)
@@ -89,6 +89,60 @@ public class TodoObject {
                 builder.doubleClick(e);
                 builder.perform();
                while (i>0)
+                {
+                    e.findElement(By.xpath("//input[@class='edit']")).sendKeys(Keys.BACK_SPACE);
+                    i--;
+                }
+                e.findElement(By.xpath("//input[@class='edit']")).sendKeys(newTask);
+                e.findElement(By.xpath("//input[@class='edit']")).sendKeys(Keys.ENTER);
+                return e.getText();
+            }
+        }
+
+        return list.get(0).getText();
+
+
+    }
+    public String updateTaskInActive(String oldTask, String newTask)
+    {
+        List<WebElement> list =listTask("active");
+        for(WebElement e:list)
+        {
+            if(e.getText().equalsIgnoreCase(oldTask))
+            {
+
+                int i = e.getText().length();
+                Actions builder = new Actions(Browsers.getDriver());
+                builder.doubleClick(e);
+                builder.perform();
+                while (i>0)
+                {
+                    e.findElement(By.xpath("//input[@class='edit']")).sendKeys(Keys.BACK_SPACE);
+                    i--;
+                }
+                e.findElement(By.xpath("//input[@class='edit']")).sendKeys(newTask);
+                e.findElement(By.xpath("//input[@class='edit']")).sendKeys(Keys.ENTER);
+                return e.getText();
+            }
+        }
+
+        return list.get(0).getText();
+
+
+    }
+    public String updateTaskInComplete(String oldTask, String newTask)
+    {
+        List<WebElement> list =listTask("completed");
+        for(WebElement e:list)
+        {
+            if(e.getText().equalsIgnoreCase(oldTask))
+            {
+
+                int i = e.getText().length();
+                Actions builder = new Actions(Browsers.getDriver());
+                builder.doubleClick(e);
+                builder.perform();
+                while (i>0)
                 {
                     e.findElement(By.xpath("//input[@class='edit']")).sendKeys(Keys.BACK_SPACE);
                     i--;

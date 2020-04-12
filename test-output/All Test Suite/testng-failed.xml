@@ -5,10 +5,8 @@
     <classes>
       <class name="TestCases.ToDoTestCase">
         <methods>
-          <include name="showAllList"/>
-          <include name="showCompletedList"/>
+          <include name="updateTaskOnCompletedList" invocation-numbers="0"/>
           <include name="setUpBrowser"/>
-          <include name="updateTask" invocation-numbers="0"/>
         </methods>
       </class> <!-- TestCases.ToDoTestCase -->
     </classes>
